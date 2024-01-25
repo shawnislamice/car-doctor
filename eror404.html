@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Doctor</title>
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/icons/logo.png" type="image/x-icon">
+    <!-- Fav Icon  -->
+    <!-- Tailwind and Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind and Daisy UI CDN -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome CDN -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font -->
+    <!-- Shared Styles -->
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-open-sans {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        img,
+        video {
+            object-fit: cover;
+        }
+
+        .imgg {
+            filter: grayscale(1);
+
+        }
+
+        .imgg:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+            filter: grayscale(0);
+        }
+    </style>
+    <!-- Shared Styles -->
+    <!-- Shared scripts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#FF3811',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Shared scripts -->
+</head>
+
+<body class="scroll-smooth">
+    <header>
+        <!-- Nav starts here -->
+        <nav class="container mx-auto max-w-screen-xl font-inter md:pt-6 pt-4 px-2 md:px-0">
+            <div class="navbar bg-base-100 justify-between">
+                <div class="navbar-start ">
+                    <div class="dropdown ">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="text-[#444] font-semibold"><a>Order</a></li>
+                            <li class="text-[#444] font-semibold"><a>Order Review</a></li>
+                            <li class="text-[#444] font-semibold"><a>Manage Inventory</a></li>
+                            <li class="text-[#444] font-semibold"><a>Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="./images/icons/logo.png" alt="" class="w-[100px] hidden lg:block">
+                        <h3 class="text-xl text-[Dark 02] font-semibold md:font-bold">Car Doctor</h3>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex items-center justify-center ">
+                    <ul class="menu menu-horizontal px-1 space-x-6">
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Order</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Order Review</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Manage Inventory</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Login</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        <!-- Nav ends here -->
+        <!-- 404 banner starts here -->
+        <div class="flex items-center justify-center md:h-[100vh]">
+            <img src="./images/icons/404.png" alt="">
+        </div>
+        <!-- 404 banner ends here -->
+    </header>
+    <main>
+
+    </main>
+</body>
+
+</html>
