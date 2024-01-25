@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Doctor</title>
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/icons/logo.png" type="image/x-icon">
+    <!-- Fav Icon  -->
+    <!-- Tailwind and Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind and Daisy UI CDN -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome CDN -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font -->
+    <!-- Shared Styles -->
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-open-sans {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        img,
+        video {
+            object-fit: cover;
+        }
+
+        .imgg {
+            filter: grayscale(1);
+
+        }
+
+        .imgg:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+            filter: grayscale(0);
+        }
+    </style>
+    <!-- Shared Styles -->
+    <!-- Shared scripts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#FF3811',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Shared scripts -->
+</head>
+
+<body>
+    <header>
+        <!-- Nav starts here -->
+        <nav class="container mx-auto max-w-screen-xl font-inter md:pt-6 pt-4 px-2 md:px-0">
+            <div class="navbar bg-base-100 justify-between">
+                <div class="navbar-start ">
+                    <div class="dropdown ">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="text-[#444] font-semibold"><a>Order</a></li>
+                            <li class="text-[#444] font-semibold"><a>Order Review</a></li>
+                            <li class="text-[#444] font-semibold"><a>Manage Inventory</a></li>
+                            <li class="text-[#444] font-semibold"><a>Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="./images/icons/logo.png" alt="" class="w-[100px] hidden lg:block">
+                        <h3 class="text-xl text-[Dark 02] font-semibold md:font-bold">Car Doctor</h3>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex items-center justify-center ">
+                    <ul class="menu menu-horizontal px-1 space-x-6">
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Order</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Order Review</a>
+                        </li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Manage
+                                Inventory</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Login</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Nav ends here -->
+        <!-- Sign up starts here -->
+        <section
+            class="container mx-auto max-w-screen-xl font-inter flex md:flex-row flex-col justify-center items-center gap-20 md:pb-28 pb-12 md:px-0 px-2">
+            <div class="py-8 md:py-0">
+                <img src="./images/login/login.svg" alt="" class="h-full">
+            </div>
+            <div class="border-2 broder-[#D0D0D0] rounded-lg">
+
+                <form action="" class=" md:p-8 p-4 space-y-6">
+                    <h1 class="text-[#444444] font-semibold md:text-[40px] text-center md:mt-12 mt-6 md:pb-12 pb-6">Login</h1>
+                    
+                    <div>
+                        <label for="" class="5 text-[#444444] md:text-[18px] font-semibold">Email</label>
+                        <input type="text" name="" id="" class="input border-[#E8E8E8] w-full  mt-2 md:mt-3 "
+                            placeholder="Your email" required>
+                    </div>
+                    <div>
+                        <label for="" class="5 text-[#444444] md:text-[18px] font-semibold">Confirm Password</label>
+                        <input type="text" name="" id="" class="input border-[#E8E8E8] w-full  mt-2 md:mt-3 "
+                            placeholder="Your password" required>
+                    </div>
+                    <button
+                        class="btn bg-primary-color border-none outline-none text-white w-full hover:scale-95 duration-300 hover:bg-red-500">Sign In</button>
+                </form>
+                <p class="text-[#444444] font-medium text-center ">Or Sign Up with</p>
+                <div class="flex justify-center items-center gap-3 text-[31px] space-x-5 md:mt-7 md:py-0 py-4">
+                    <i class="fa-brands fa-facebook" style="color: #74C0FC;"></i>
+                    <i class="fa-brands fa-linkedin" style="color: #74C0FC;"></i>
+                    <i class="fa-brands fa-google" style="color: #74C0FC;"></i>
+                </div>
+                <p class="text-[#737373] md:py-12 py-6 text-center">Have an account?  <span
+                        class="text-primary-color">Sign In</span></p>
+            </div>
+
+        </section>
+        <!-- Sign up ends here -->
+    </header>
+</body>
+
+</html>
