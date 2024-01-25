@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Doctor</title>
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/icons/logo.png" type="image/x-icon">
+    <!-- Fav Icon  -->
     <!-- Tailwind and Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,11 +20,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font -->
     <!-- Shared Styles -->
     <style>
         .font-inter {
             font-family: 'Inter', sans-serif;
+        }
+
+        .font-open-sans {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        img,
+        video {
+            object-fit: cover;
+        }
+
+        .imgg {
+            filter: grayscale(1);
+
+        }
+
+        .imgg:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+            filter: grayscale(0);
         }
     </style>
     <!-- Shared Styles -->
@@ -32,6 +60,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'primary-color': '#FF3811',
                     }
                 }
             }
@@ -40,10 +69,889 @@
     <!-- Shared scripts -->
 </head>
 
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+<body class="scroll-smooth">
+    <header>
+        <!-- Nav starts here -->
+        <nav class="container mx-auto max-w-screen-xl font-inter md:pt-6 pt-4 px-2 md:px-0">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="text-[#444] font-semibold"><a>Home</a></li>
+                            <li class="text-[#444] font-semibold"><a>About</a></li>
+                            <li class="text-[#444] font-semibold"><a>Services</a></li>
+                            <li class="text-[#444] font-semibold"><a>Blog</a></li>
+                            <li class="text-[#444] font-semibold"><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="./images/icons/logo.png" alt="" class="w-[100px] hidden lg:block">
+                        <h3 class="text-xl text-[Dark 02] font-semibold md:font-bold">Car Doctor</h3>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 ">
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Home</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>About</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Services</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Blog</a></li>
+                        <li class="text-[#444] font-semibold hover:text-primary-color duration-300"><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end ">
+                    <div class="flex justify-center items-center gap-7">
+                        <img src="./images/icons/shopping.png" alt="" class="hidden lg:block w-[22px]">
+                        <i class="fa-solid fa-magnifying-glass lg:block hidden"></i>
+                        <a class="btn btn-outline  text-[#FF3811] font-semibold">Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Nav ends here -->
+        <!-- Affordable price for car starts here-->
+        <section class="container mx-auto max-w-screen-xl font-inter md:mt-12 mt-6 md:px-0 px-2">
+            <div class="carousel w-full rounded-lg  md:h-[600px]">
+                <div id="slide1"
+                    class="py-4 md:py-0 carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9)),url(./images/banner/1.jpg)] bg-center bg-cover bg-no-repeat items-center">
+                    <div class="absolute flex justify-between transform right-0 bottom-0 md:p-10 p-4 gap-4">
+                        <a href="#slide4"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/right.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide2"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/left.png" alt="" class="translate-x-3 translate-y-3"></a>
+
+                    </div>
+                    <div class="md:pl-20 pl-4">
+                        <h1 class="text-white text-2xl w-full md:text-6xl font-bold md:w-2/5 md:leading-[75px]">
+                            Affordable Price For Car Servicing</h1>
+                        <p class="text-white md:text-[18px] capitalize md:py-5 py-4 md:w-[500px]">There are many
+                            variations of passages of available, but the majority have suffered alteration in some form
+                        </p>
+                        <button
+                            class="btn text-white bg-primary-color border-none outline-none hover:bg-transparent hover:outline-2 hover:outline-primary-color hover:scale-95 duration-300">Discover
+                            More</button>
+                        <button
+                            class="btn text-white btn-outline outline-primary-color  hover:bg-transparent ml-2 md:ml-5 hover:bg-primary-color hover:scale-95 duration-300">Latest
+                            Project</button>
+                    </div>
+                </div>
+                <div id="slide2"
+                    class="py-4 md:py-0 carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9)),url(./images/banner/2.jpg)] bg-center bg-cover bg-no-repeat items-center">
+                    <div class="absolute flex justify-between transform right-0 bottom-0 md:p-10 p-4 gap-4">
+                        <a href="#slide1"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/right.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide3"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/left.png" alt="" class="translate-x-3 translate-y-3"></a>
+
+                    </div>
+                    <div class="md:pl-20 pl-4">
+                        <h1 class="text-white text-2xl w-full md:text-6xl font-bold md:w-2/5 md:leading-[75px]">
+                            Affordable Price For Car Servicing</h1>
+                        <p class="text-white md:text-[18px] capitalize md:py-5 py-4 md:w-[500px]">There are many
+                            variations of passages of available, but the majority have suffered alteration in some form
+                        </p>
+                        <button
+                            class="btn text-white bg-primary-color border-none outline-none hover:bg-transparent hover:outline-2 hover:outline-primary-color hover:scale-95 duration-300">Discover
+                            More</button>
+                        <button
+                            class="btn text-white btn-outline outline-primary-color  hover:bg-transparent ml-2 md:ml-5 hover:bg-primary-color hover:scale-95 duration-300">Latest
+                            Project</button>
+                    </div>
+                </div>
+                <div id="slide3"
+                    class="py-4 md:py-0 carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9)),url(./images/banner/3.jpg)] bg-center bg-cover bg-no-repeat items-center">
+                    <div class="absolute flex justify-between transform right-0 bottom-0 md:p-10 p-4 gap-4">
+                        <a href="#slide2"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/right.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide4"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/left.png" alt="" class="translate-x-3 translate-y-3"></a>
+
+                    </div>
+                    <div class="md:pl-20 pl-4">
+                        <h1 class="text-white text-2xl w-full md:text-6xl font-bold md:w-2/5 md:leading-[75px]">
+                            Affordable Price For Car Servicing</h1>
+                        <p class="text-white md:text-[18px] capitalize md:py-5 py-4 md:w-[500px]">There are many
+                            variations of passages of available, but the majority have suffered alteration in some form
+                        </p>
+                        <button
+                            class="btn text-white bg-primary-color border-none outline-none hover:bg-transparent hover:outline-2 hover:outline-primary-color hover:scale-95 duration-300">Discover
+                            More</button>
+                        <button
+                            class="btn text-white btn-outline outline-primary-color  hover:bg-transparent ml-2 md:ml-5 hover:bg-primary-color hover:scale-95 duration-300">Latest
+                            Project</button>
+                    </div>
+                </div>
+                <div id="slide4"
+                    class="py-4 md:py-0 carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9)),url(./images/banner/4.jpg)] bg-center bg-cover bg-no-repeat items-center">
+                    <div class="absolute flex justify-between transform right-0 bottom-0 md:p-10 p-4 gap-4">
+                        <a href="#slide3"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/right.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide5"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/left.png" alt="" class="translate-x-3 translate-y-3"></a>
+
+                    </div>
+                    <div class="md:pl-20 pl-4">
+                        <h1 class="text-white text-2xl w-full md:text-6xl font-bold md:w-2/5 md:leading-[75px]">
+                            Affordable Price For Car Servicing</h1>
+                        <p class="text-white md:text-[18px] capitalize md:py-5 py-4 md:w-[500px]">There are many
+                            variations of passages of available, but the majority have suffered alteration in some form
+                        </p>
+                        <button
+                            class="btn text-white bg-primary-color border-none outline-none hover:bg-transparent hover:outline-2 hover:outline-primary-color hover:scale-95 duration-300">Discover
+                            More</button>
+                        <button
+                            class="btn text-white btn-outline outline-primary-color  hover:bg-transparent ml-2 md:ml-5 hover:bg-primary-color hover:scale-95 duration-300">Latest
+                            Project</button>
+                    </div>
+                </div>
+                <div id="slide5"
+                    class="py-4 md:py-0 carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9)),url(./images/banner/5.jpg)] bg-center bg-cover bg-no-repeat items-center">
+                    <div class="absolute flex justify-between transform right-0 bottom-0 md:p-10 p-4 gap-4">
+                        <a href="#slide4"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/right.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide6"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/left.png" alt="" class="translate-x-3 translate-y-3"></a>
+
+                    </div>
+                    <div class="md:pl-20 pl-4">
+                        <h1 class="text-white text-2xl w-full md:text-6xl font-bold md:w-2/5 md:leading-[75px]">
+                            Affordable Price For Car Servicing</h1>
+                        <p class="text-white md:text-[18px] capitalize md:py-5 py-4 md:w-[500px]">There are many
+                            variations of passages of available, but the majority have suffered alteration in some form
+                        </p>
+                        <button
+                            class="btn text-white bg-primary-color border-none outline-none hover:bg-transparent hover:outline-2 hover:outline-primary-color hover:scale-95 duration-300">Discover
+                            More</button>
+                        <button
+                            class="btn text-white btn-outline outline-primary-color  hover:bg-transparent ml-2 md:ml-5 hover:bg-primary-color hover:scale-95 duration-300">Latest
+                            Project</button>
+                    </div>
+                </div>
+                <div id="slide6"
+                    class="py-4 md:py-0 carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9)),url(./images/banner/6.jpg)] bg-center bg-cover bg-no-repeat items-center">
+                    <div class="absolute flex justify-between transform right-0 bottom-0 md:p-10 p-4 gap-4">
+                        <a href="#slide5"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/right.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide1"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/left.png" alt="" class="translate-x-3 translate-y-3"></a>
+
+                    </div>
+                    <div class="md:pl-20 pl-4">
+                        <h1 class="text-white text-2xl w-full md:text-6xl font-bold md:w-2/5 md:leading-[75px]">
+                            Affordable Price For Car Servicing</h1>
+                        <p class="text-white md:text-[18px] capitalize md:py-5 py-4 md:w-[500px]">There are many
+                            variations of passages of available, but the majority have suffered alteration in some form
+                        </p>
+                        <button
+                            class="btn text-white bg-primary-color border-none outline-none hover:bg-transparent hover:outline-2 hover:outline-primary-color hover:scale-95 duration-300">Discover
+                            More</button>
+                        <button
+                            class="btn text-white btn-outline outline-primary-color  hover:bg-transparent ml-2 md:ml-5 hover:bg-primary-color hover:scale-95 duration-300">Latest
+                            Project</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Affordable price for car ends here-->
+
+    </header>
+    <main>
+        <!-- We are qualified starts here -->
+        <section
+            class="container mx-auto font-inter max-w-screen-xl md:my-28 my-14 flex justify-center items-center md:flex-row flex-col gap-10 md:gap-0 px-2 md:px-0">
+            <div class="md:w-1/2 md:relative space-y-4 md:space-y-0">
+                <img src="./images/about_us/person.jpg" alt="" class="md:size-[473px] rounded-lg imgg">
+
+
+                <img src="./images/about_us/parts.jpg" alt=""
+                    class=" md:size-[330px] rounded-lg border-4 border-white md:absolute top-[50%] left-[40%] shadow-lg imgg">
+
+            </div>
+            <div class="md:w-1/2">
+                <p class="text-xl font-bold text-primary-color">About Us</p>
+                <h1 class=" text-2xl md:text-5xl font-bold py-3 md:py-5">We are qualified & of experience in this field
+                </h1>
+                <p class="capitalize text-[#737373] md:pt-4 pt-2 pb-4 md:pb-3 ">There are many variations of passages of
+                    Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. </p>
+                <p class="capitalize text-[#737373] md:pb-3 pb-4">the majority have suffered alteration in some form, by
+                    injected humour, or randomized words which
+                    don't look even slightly believable. </p>
+                <button
+                    class="btn text-white bg-primary-color border-none outline-none  duration-300 hover:bg-black hover:scale-95">Get
+                    More Info</button>
+
+            </div>
+        </section>
+        <!-- We are qualified ends here -->
+        <!-- Service area starts here  -->
+        <section class="container mx-auto max-w-screen-xl font-inter my-12 md:mt-[200px] md:mb-[100px] px-2 md:px-0 ">
+            <div>
+                <h1 class="text-primary-color font-bold text-xl text-center py-3">Service</h1>
+                <h1 class="text-[#151515] text-2xl md:text-4xl text-center font-bold md:pb-5 pb-3">Our Service Area</h1>
+                <p class="text-[#737373] md:w-2/3 mx-auto  text-center capitalize leading-[30px]">the majority have
+                    suffered alteration in some form, by injected humour, or randomised words which
+                    don't look even slightly believable. </p>
+            </div>
+            <div class="md:mt-12 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-y-6">
+                <div
+                    class="md:size-[365px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <img src="./images/services/1.jpg" alt="" class="rounded-lg md:w-[300px] md:h-[200px]">
+                    <h3 class="text-2xl font-bold text-[#444444] md:py-5 py-4 text-start">Electrical System</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xl font-semibold text-primary-color">Price : $20.00</p>
+                        <a href=""><img src="./images/icons/orangeicon.png" alt=""></a>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[365px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <img src="./images/services/2.jpg" alt="" class="rounded-lg md:w-[300px] md:h-[200px]">
+                    <h3 class="text-2xl font-bold text-[#444444] md:py-5 py-4 text-start">Engine Diagnostics</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xl font-semibold text-primary-color">Price : $20.00</p>
+                        <a href=""><img src="./images/icons/orangeicon.png" alt=""></a>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[365px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <img src="./images/services/3.jpg" alt="" class="rounded-lg md:w-[300px] md:h-[200px]">
+                    <h3 class="text-2xl font-bold text-[#444444] md:py-5 py-4 text-start">Auto Car Repair</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xl font-semibold text-primary-color">Price : $20.00</p>
+                        <a href=""><img src="./images/icons/orangeicon.png" alt=""></a>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[365px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <img src="./images/services/4.jpg" alt="" class="rounded-lg md:w-[300px] md:h-[200px]">
+                    <h3 class="text-2xl font-bold text-[#444444] md:py-5 py-4 text-start">Electrical System</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xl font-semibold text-primary-color">Price : $20.00</p>
+                        <a href=""><img src="./images/icons/orangeicon.png" alt=""></a>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[365px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <img src="./images/services/5.jpg" alt="" class="rounded-lg md:w-[300px] md:h-[200px]">
+                    <h3 class="text-2xl font-bold text-[#444444] md:py-5 py-4 text-start">Engine Diagnostics</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xl font-semibold text-primary-color">Price : $20.00</p>
+                        <a href=""><img src="./images/icons/orangeicon.png" alt=""></a>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[365px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <img src="./images/services/6.jpg" alt="" class="rounded-lg md:w-[300px] md:h-[200px]">
+                    <h3 class="text-2xl font-bold text-[#444444] md:py-5 py-4 text-start">Auto Car Repair</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xl font-semibold text-primary-color">Price : $20.00</p>
+                        <a href=""><img src="./images/icons/orangeicon.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="btn btn-outline outline-primary-color font-semibold text-primary-color outline-2 md:mt-12 mt-6 mx-auto block">More
+                Services</button>
+
+        </section>
+        <!-- Service area ends here  -->
+        <!-- Details section starts here -->
+        <section
+            class="container mx-auto max-w-screen-xl font-inter md:my-28 my-14 bg-[#151515] rounded-lg px-2 md:px-0">
+            <div class="py-10 md:py-20 flex justify-around items-center md:flex-row flex-col md:gap-0 gap-8">
+                <div class="flex gap-4 items-center">
+                    <div>
+                        <img src="./images/icons/001-timetable.png" alt="">
+                    </div>
+                    <div>
+                        <p class="text-white font-medium pb-[3px]">We are open monday-friday</p>
+                        <h3 class="text-2xl font-bold text-white">7:00 am - 9:00 pm</h3>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <div>
+                        <img src="./images/icons/phone.png" alt="">
+                    </div>
+                    <div>
+                        <p class="text-white font-medium pb-[3px]">Have a question?</p>
+                        <h3 class="text-2xl font-bold text-white">+2546 251 2658</h3>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <div>
+                        <img src="./images/icons/location.png" alt="">
+                    </div>
+                    <div>
+                        <p class="text-white font-medium pb-[3px]">Need a repair? our address</p>
+                        <h3 class="text-2xl font-bold text-white">Liza Street, New York</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Details section ends here -->
+        <!-- Browse our products starts here -->
+        <section class="container mx-auto font-inter max-w-screen-xl px-2 md:px-0">
+            <div>
+                <h1 class="text-primary-color font-bold text-xl text-center py-3">Popular Products</h1>
+                <h1 class="text-[#151515] text-2xl md:text-4xl text-center font-bold md:pb-5 pb-3">Browse Our Products
+                </h1>
+                <p class="text-[#737373] md:w-2/3 mx-auto  text-center capitalize leading-[30px]">the majority have
+                    suffered alteration in some form, by injected humour, or randomised words which don't look even
+                    slightly believable. </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 md:pt-12 pt-6">
+                <div
+                    class="md:size-[370px] md:h-[390px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/products/2.png" alt="" class="md:w-[60%] mx-auto pt-5">
+                    </div>
+                    <div class="rating pt-3 flex justify-center">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Car Engine Plug</h3>
+                        <p class="text-xl text-primary-color font-semibold pb-4 text-center">$20.00</p>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[390px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/products/3.png" alt="" class="md:w-[60%] mx-auto pt-5">
+                    </div>
+                    <div class="rating pt-3 flex justify-center">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Car Air Filter</h3>
+                        <p class="text-xl text-primary-color font-semibold pb-4 text-center">$20.00</p>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[390px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/products/1.png" alt="" class="md:w-[60%] mx-auto pt-5">
+                    </div>
+                    <div class="rating pt-3 flex justify-center">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Car Engine Plug</h3>
+                        <p class="text-xl text-primary-color font-semibold pb-4 text-center">$20.00</p>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[390px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/products/4.png" alt="" class="md:w-[60%] mx-auto pt-5">
+                    </div>
+                    <div class="rating pt-3 flex justify-center">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Cools Led Light</h3>
+                        <p class="text-xl text-primary-color font-semibold pb-4 text-center">$20.00</p>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[390px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/products/5.png" alt="" class="md:w-[60%] mx-auto pt-5">
+                    </div>
+                    <div class="rating pt-3 flex justify-center">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Cools Led Light</h3>
+                        <p class="text-xl text-primary-color font-semibold pb-4 text-center">$20.00</p>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[390px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/products/6.png" alt="" class="md:w-[60%] mx-auto pt-5">
+                    </div>
+                    <div class="rating pt-3 flex justify-center">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Cools Led Light</h3>
+                        <p class="text-xl text-primary-color font-semibold pb-4 text-center">$20.00</p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="btn btn-outline outline-primary-color font-semibold text-primary-color outline-2 md:mt-12 mt-6 mx-auto block">More
+                Products</button>
+        </section>
+        <!-- Browse our products ends here -->
+        <!-- Team starts here -->
+        <section class="container mx-auto max-w-screen-xl font-inter md:my-24 my-12 px-2 md:px-0">
+            <div>
+                <h1 class="text-primary-color font-bold text-xl text-center py-3">Team</h1>
+                <h1 class="text-[#151515] text-2xl md:text-4xl text-center font-bold md:pb-5 pb-3">Meet Our Team
+                </h1>
+                <p class="text-[#737373] md:w-2/3 mx-auto  text-center capitalize leading-[30px]">the majority have
+                    suffered alteration in some form, by injected humour, or randomised words which don't look even
+                    slightly believable. </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:pt-6 pt-4">
+                <div
+                    class="md:size-[370px] md:h-[410px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/team/1.jpg" alt="" class="rounded-lg h-full">
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Car Engine Plug</h3>
+                        <p class="text-xl text-[#737373] text-center py-1">Engine Expert</p>
+                        <div class="flex gap-3 justify-center pt-1 mb-3">
+                            <img src="./images/icons/facebook.png" alt="">
+                            <img src="./images/icons/twitter.png" alt="">
+                            <img src="./images/icons/linkedin.png" alt="">
+                            <div class="flex justify-center items-center">
+                                <img src="./images/icons/insbg.png" alt="" class="">
+                                <img src="./images/icons/inslogo.png" alt="" class="absolute z-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[410px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/team/2.jpg" alt="" class="rounded-lg h-full">
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Car Engine Plug</h3>
+                        <p class="text-xl text-[#737373] text-center py-1">Engine Expert</p>
+                        <div class="flex gap-3 justify-center pt-1 mb-3">
+                            <img src="./images/icons/facebook.png" alt="">
+                            <img src="./images/icons/twitter.png" alt="">
+                            <img src="./images/icons/linkedin.png" alt="">
+                            <div class="flex justify-center items-center">
+                                <img src="./images/icons/insbg.png" alt="" class="">
+                                <img src="./images/icons/inslogo.png" alt="" class="absolute z-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="md:size-[370px] md:h-[410px] border-2 border-[#E8E8E8] rounded-lg shadow-lg p-8 hover:scale-105 duration-300">
+                    <div class="bg-[#F3F3F3] ] md:h-[215px] rounded-lg">
+                        <img src="./images/team/3.jpg" alt="" class="rounded-lg h-full">
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#444444] py-2 text-center">Car Engine Plug</h3>
+                        <p class="text-xl text-[#737373] text-center py-1">Engine Expert</p>
+                        <div class="flex gap-3 justify-center pt-1 mb-3">
+                            <img src="./images/icons/facebook.png" alt="">
+                            <img src="./images/icons/twitter.png" alt="">
+                            <img src="./images/icons/linkedin.png" alt="">
+                            <div class="flex justify-center items-center">
+                                <img src="./images/icons/insbg.png" alt="" class="">
+                                <img src="./images/icons/inslogo.png" alt="" class="absolute z-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team ends here -->
+        <!-- Why choose us starts here -->
+        <section class="container mx-auto max-w-screen-xl font-inter md:mb-24 mb-12">
+            <div>
+                <h1 class="text-primary-color font-bold text-xl text-center py-3">Core Features</h1>
+                <h1 class="text-[#151515] text-2xl md:text-4xl text-center font-bold md:pb-5 pb-3">Why Choose Us
+                </h1>
+                <p class="text-[#737373] md:w-2/3 mx-auto  text-center capitalize leading-[30px]">the majority have
+                    suffered alteration in some form, by injected humour, or randomised words which don't look even
+                    slightly believable. </p>
+            </div>
+            <div class="flex md:flex-row flex-col justify-around gap-y-4 md:pt-6 pt-4">
+                <div
+                    class="border-2 border-[#E8E8E8] rounded-lg p-3 flex justify-center flex-col items-center gap-1 hover:bg-primary-color duration-300 md:w-[170px] md:h-[150px]">
+                    <img src="./images/icons/group.svg" alt="">
+                    <h3 class="text-[18px] font-bold text-[#444444] pt-2">Expert Team</h3>
+                </div>
+                <div
+                    class="border-2 border-[#E8E8E8] rounded-lg p-3 flex justify-center flex-col items-center gap-1 hover:bg-primary-color duration-300 md:w-[170px] md:h-[150px]">
+                    <img src="./images/icons/deliveryt.svg" alt="">
+                    <h3 class="text-[18px] font-bold text-[#444444] pt-2">Timely Delivery</h3>
+                </div>
+                <div
+                    class="border-2 border-[#E8E8E8] rounded-lg p-3 flex justify-center flex-col items-center gap-1 hover:bg-primary-color duration-300 md:w-[170px] md:h-[150px]">
+                    <img src="./images/icons/person.svg" alt="">
+                    <h3 class="text-[18px] font-bold text-[#444444] pt-2">24/7 Support</h3>
+                </div>
+                <div
+                    class="border-2 border-[#E8E8E8] rounded-lg p-3 flex justify-center flex-col items-center gap-1 hover:bg-primary-color duration-300 md:w-[170px] md:h-[150px]">
+                    <img src="./images/icons/Wrench.svg" alt="">
+                    <h3 class="text-[18px] font-bold text-[#444444] pt-2">Best Equipment</h3>
+                </div>
+                <div
+                    class="border-2 border-[#E8E8E8] rounded-lg p-3 flex justify-center flex-col items-center gap-1 hover:bg-primary-color duration-300 md:w-[170px] md:h-[150px]">
+                    <img src="./images/icons/check.svg" alt="">
+                    <h3 class="text-[18px] font-bold text-[#444444] pt-2">100% Guaranty</h3>
+                </div>
+                <div
+                    class="border-2 border-[#E8E8E8] rounded-lg p-3 flex justify-center flex-col items-center gap-1 hover:bg-primary-color duration-300 md:w-[170px] md:h-[150px]">
+                    <img src="./images/icons/Group 38729.svg" alt="" class="bg-black rounded-full">
+                    <h3 class="text-[18px] font-bold text-[#444444] pt-2">Timely Delivery</h3>
+                </div>
+            </div>
+
+        </section>
+        <!-- Why choose us ends here -->
+        <!-- What customer says starts here -->
+        <section class="container mx-auto max-w-screen-xl font-inter md:my-24 my-12">
+            <div>
+                <h1 class="text-primary-color font-bold text-xl text-center py-3">Testimonial</h1>
+                <h1 class="text-[#151515] text-2xl md:text-4xl text-center font-bold md:pb-5 pb-3">What Customer Says
+                </h1>
+                <p class="text-[#737373] md:w-2/3 mx-auto  text-center capitalize leading-[30px]">the majority have
+                    suffered alteration in some form, by injected humour, or randomised words which don't look even
+                    slightly believable. </p>
+            </div>
+            <div class="carousel w-full pt-6 md:pt-12">
+                <div id="slide10"
+                    class="py-4 md:py-0 carousel-item relative w-full justify-center gap-3 md:flex-row flex-col">
+                    <div class="md:w-[560px] border-[#F3F3F3] border-2 rounded-lg p-8">
+                        <div class="flex gap-4  justify-between  ">
+                            <div class="flex gap-3">
+                                <img src="./images/icons/p3.png" />
+                                <div>
+                                    <h3 class="text-[#444444] text-2xl font-bold">Awlad Hossain</h3>
+                                    <p>Businessman</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="./images/icons/quote.png" alt="" class=" mr-28">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 justify-center pt-3">
+                            <div>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't
+                                    look
+                                    even slightly believable. </p>
+                            </div>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-[560px] border-[#F3F3F3] border-2 rounded-lg p-8">
+                        <div class="flex gap-4  justify-between  ">
+                            <div class="flex gap-3">
+                                <img src="./images/icons/p3.png" />
+                                <div>
+                                    <h3 class="text-[#444444] text-2xl font-bold">Awlad Hossain</h3>
+                                    <p>Businessman</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="./images/icons/quote.png" alt="" class=" mr-28">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 justify-center pt-3">
+                            <div>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't
+                                    look
+                                    even slightly believable. </p>
+                            </div>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide12"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/leftblack.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide11"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/leftblack.png" alt=""
+                                class="translate-x-3 translate-y-3 rotate-180"></a>
+
+                    </div>
+
+                </div>
+                <div id="slide11"
+                    class="py-4 md:py-0 carousel-item relative w-full justify-center gap-3 md:flex-row flex-col">
+                    <div class="md:w-[560px] border-[#F3F3F3] border-2 rounded-lg p-8">
+                        <div class="flex gap-4  justify-between  ">
+                            <div class="flex gap-3">
+                                <img src="./images/icons/p3.png" />
+                                <div>
+                                    <h3 class="text-[#444444] text-2xl font-bold">Awlad Hossain</h3>
+                                    <p>Businessman</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="./images/icons/quote.png" alt="" class=" mr-28">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 justify-center pt-3">
+                            <div>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't
+                                    look
+                                    even slightly believable. </p>
+                            </div>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-[560px] border-[#F3F3F3] border-2 rounded-lg p-8">
+                        <div class="flex gap-4  justify-between  ">
+                            <div class="flex gap-3">
+                                <img src="./images/icons/p3.png" />
+                                <div>
+                                    <h3 class="text-[#444444] text-2xl font-bold">Awlad Hossain</h3>
+                                    <p>Businessman</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="./images/icons/quote.png" alt="" class=" mr-28">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 justify-center pt-3">
+                            <div>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't
+                                    look
+                                    even slightly believable. </p>
+                            </div>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide10"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/leftblack.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide12"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/leftblack.png" alt=""
+                                class="translate-x-3 translate-y-3 rotate-180"></a>
+
+                    </div>
+
+                </div>
+                <div id="slide12"
+                    class="py-4 md:py-0 carousel-item relative w-full justify-center gap-3 md:flex-row flex-col">
+                    <div class="md:w-[560px] border-[#F3F3F3] border-2 rounded-lg p-8">
+                        <div class="flex gap-4  justify-between  ">
+                            <div class="flex gap-3">
+                                <img src="./images/icons/p3.png" />
+                                <div>
+                                    <h3 class="text-[#444444] text-2xl font-bold">Awlad Hossain</h3>
+                                    <p>Businessman</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="./images/icons/quote.png" alt="" class=" mr-28">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 justify-center pt-3">
+                            <div>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't
+                                    look
+                                    even slightly believable. </p>
+                            </div>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-[560px] border-[#F3F3F3] border-2 rounded-lg p-8">
+                        <div class="flex gap-4  justify-between  ">
+                            <div class="flex gap-3">
+                                <img src="./images/icons/p3.png" />
+                                <div>
+                                    <h3 class="text-[#444444] text-2xl font-bold">Awlad Hossain</h3>
+                                    <p>Businessman</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="./images/icons/quote.png" alt="" class=" mr-28">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 justify-center pt-3">
+                            <div>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't
+                                    look
+                                    even slightly believable. </p>
+                            </div>
+                            <div class="rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide11"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/leftblack.png" alt="" class="translate-x-3 translate-y-3"></a>
+                        <a href="#slide10"
+                            class=" btn-circle bg-[url(./images/icons/btn-ellipse.png)] bg-cover border-none hover:bg-primary-color duration-300"><img
+                                src="./images/icons/leftblack.png" alt=""
+                                class="translate-x-3 translate-y-3 rotate-180"></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- What customer says ends here -->
+    </main>
+    <!-- Footer starts here -->
+    <section class=" bg-[#151515] text-white md:py-20 py-10">
+        <footer class="footer p-10  text-base-content container mx-auto font-inter max-w-screen-xl text-white">
+            <aside class="">
+                <div class="flex flex-col items-center gap-2">
+                    <img src="./images/icons/logo.png" alt="">
+                    <h3 class="font-open-sans text-xl font-bold">Car Doctor</h3>
+                </div>
+                <p class="md:w-[283px] text-[#E8E8E8] pt-2">Edwin Diaz is a software and web technologies engineer, a
+                    life coach trainer who is also a serial .
+                </p>
+                <div class="flex gap-3 pt-3 text-white">
+                    <div class="relative">
+                        <i class="fa-brands fa-google absolute left-[12px] top-[10px]"></i>
+                        <img src="./images/icons/iconbg.png" alt="">
+
+                    </div>
+                    <div class="relative">
+                        <i class="fa-brands fa-twitter absolute left-[12px] top-[10px]"></i>
+                        <img src="./images/icons/iconbg.png" alt="">
+
+                    </div>
+                    <div class="relative">
+                        <i class="fa-brands fa-instagram absolute left-[12px] top-[10px]"></i>
+                        <img src="./images/icons/iconbg.png" alt="">
+
+                    </div>
+                    <div class="relative">
+                        <i class="fa-brands fa-linkedin absolute left-[12px] top-[10px]"></i>
+                        <img src="./images/icons/iconbg.png" alt="">
+
+                    </div>
+
+                </div>
+            </aside>
+            <nav>
+                <h6 class="text-white font-semibold text-xl">About</h6>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">Service</a>
+                <a class="link link-hover">Contact</a>
+            </nav>
+            <nav>
+                <h6 class="text-white font-semibold text-xl">Company</h6>
+                <a class="link link-hover">Why Car Doctor</a>
+                <a class="link link-hover">About</a>
+            </nav>
+            <nav>
+                <h6 class="text-white font-semibold text-xl">Support</h6>
+                <a class="link link-hover">Support Center</a>
+                <a class="link link-hover">Feedback</a>
+                <a class="link link-hover">Accessability</a>
+            </nav>
+        </footer>
+    </section>
+    <!-- Footer ends here -->
 </body>
 
 </html>
